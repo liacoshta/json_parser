@@ -19,15 +19,21 @@ STR [a-zA-Z]+
 {FLOAT} { return FLOAT;}
 {STR} { return STR;}
 [,] {return ',';}
-\: {return ':';}
-\" {return '"';}
-\[ {return '[';}
-\] {return ']';}
-\} { return '{';}
-\{ { return '{';}
+\: {
+	return ':';}
+\" {
+	return '"';}
+\[ {
+	return '[';}
+\] {
+	return ']';}
+\} { 
+	return '}';}
+\{ { 
+	return '{';}
 [\n] { return '\n';}
 [[:space:]] ;
-. {yyerror("INVALIDO\n"); }
+. { }
 
 
 %%
