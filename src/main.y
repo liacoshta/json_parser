@@ -12,13 +12,16 @@ int yylex(void);
 %%
 
 S:
-  L '\n'{printf("VALIDO\n");}
+  L {printf("VALIDO\n");}
   ;
 L:
   '{' C '}' {}
   | '{''\n' C '}' {}
   | '{''\n' C '\n''}' {}
   | '{' C '\n''}' {}
+  |  '{' C '}''\n' {}
+  |  '{' C '\n''}''\n' {}
+  | L '\n' {}
   ;
 
 C:
