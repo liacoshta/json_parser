@@ -33,7 +33,7 @@ teste ["\n"]?
 	return '}';}
 \{ { 
 	return '{';}
-[\n] { return '\n';}
+[\n] {}
 [[:space:]] ;
 . { }
 
