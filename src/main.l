@@ -11,7 +11,9 @@ void yyerror(char *);
 
 INT [0-9]+
 FLOAT {INT}[.]{INT}
-STR [a-zA-Z]+
+palavra [a-zA-Z]+
+texto {palavra}[' ']*
+STR ["]{texto}["]
 
 %%
 
