@@ -14,7 +14,7 @@ FLOAT {INT}[.]{INT}
 palavra [a-zA-Z]+
 texto {palavra}([' ']{palavra})*
 STR ["]{texto}["]
-
+teste ["\n"]?
 %%
 
 [0-9]+ { return INT;}
