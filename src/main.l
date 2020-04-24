@@ -11,7 +11,7 @@ void yyerror(char *);
 
 INT [0-9]+
 FLOAT {INT}[.]{INT}
-palavra [a-zA-Z]+
+palavra [a-zA-Z]*{INT}*
 texto {palavra}([' ']{palavra})*
 STR ["]{texto}["]
 teste ["\n"]?

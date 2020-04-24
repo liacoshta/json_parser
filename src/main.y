@@ -19,7 +19,6 @@ L:
   | '{''\n' C '}' {}
   | '{''\n' C '\n''}' {}
   | '{' C '\n''}' {}
-  |
   ;
 
 C:
@@ -44,7 +43,6 @@ D:
   | P {}
   | STR {}
   | D','D {}
-  | D',''\n'D {}
   |
   ;
 
@@ -53,7 +51,7 @@ D:
 %%
 
 void yyerror(char *s) {
-	printf("INVALIDO/n");
+	printf("INVALIDO\n");
 }
 
 int main() {
